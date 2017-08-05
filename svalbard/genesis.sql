@@ -1,0 +1,38 @@
+DROP TABLE IF EXISTS Users;
+CREATE TABLE Users(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username VARCHAR(20) UNIQUE NOT NULL,
+    email VARCHAR(50) UNIQUE NOT NULL,
+    birthdate VARCHAR(10) NOT NULL,
+    city VARCHAR(20) NOT NULL,
+    country VARCHAR(20) NOT NULL,
+    created VARCHAR(10) NOT NULL
+    );
+
+DROP TABLE IF EXISTS Companies;
+CREATE TABLE Companies(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(50) UNIQUE NOT NULL,
+    created VARCHAR(10) NOT NULL
+    );
+
+DROP TABLE IF EXISTS Products;
+CREATE TABLE Products(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    company_id INT NOT NULL,
+    points INT NOT NULL,
+    created VARCHAR(10) NOT NULL
+    );
+
+DROP TABLE IF EXISTS Acquisitions;
+CREATE TABLE Acquisitions(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    company_id INT NOT NULL,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    created VARCHAR(10) NOT NULL,
+    longitude REAL NOT NULL,
+    latitude REAL NOT NULL
+    );
