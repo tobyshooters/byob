@@ -1,4 +1,11 @@
 module.exports = function(app, db) {
+  // Test
+  app.get('/', (req, res) => {
+    db.Users.findAll().then(users => {
+      res.json(users);
+    });
+  });
+
   // Users
   app.get('/api/users/:id', (req, res) => {
     res.send('Hello'); 
