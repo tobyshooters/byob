@@ -10,6 +10,7 @@ let db = new sqlite3.Database('../svalbard/svalbard.db', sqlite3.OPEN_READWRITE,
 const app = express();
 
 var port = process.env.PORT || 3000;
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
 require('./app/routes.js')(app, {});
