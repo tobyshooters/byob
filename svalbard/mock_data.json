@@ -26,104 +26,104 @@
             "username"  : "hafaela",
             "email"     : "hahafa@hotmail.com",
             "birthdate" : "2010-05-03",
-            "city"      : "",
-            "country"   : ""
+            "city"      : "London",
+            "country"   : "England"
         },
         {
-            "username"  : "",
-            "email"     : "",
-            "birthdate" : "",
-            "city"      : "",
-            "country"   : ""
+            "username"  : "amelie",
+            "email"     : "aaa@gmail.com",
+            "birthdate" : "1990-10-12",
+            "city"      : "Mumbai",
+            "country"   : "India"
         }
     ],
 
     "Companies": [
         {
-            "name"  : "",
-            "email" : ""
+            "name"  : "Bebidas S.A.",
+            "email" : "oi@bebidas.com"
         },
         {
-            "name"  : "",
-            "email" : ""
+            "name"  : "Comidas Ltda.",
+            "email" : "ola@comidas.com"
         },
         {
-            "name"  : "",
-            "email" : ""
+            "name"  : "Semisolidos",
+            "email" : "bele@semisolidos.com"
         },
         {
-            "name"  : "",
-            "email" : ""
+            "name"  : "Condensados de Bose-Einstein S.A.",
+            "email" : "leites@condensados.com"
         },
         {
-            "name"  : "",
-            "email" : ""
+            "name"  : "gaseosas bebidas ltda.",
+            "email" : "contato@gmail.com"
         }
     ],
 
     "Products": [
         {
-            "name"       : "",
-            "company_id" : ,
-            "points"     : 
+            "name"       : "agua",
+            "company_id" : 1,
+            "points"     : 5
         },
         {
-            "name"       : "",
-            "company_id" : ,
-            "points"     : 
+            "name"       : "refri",
+            "company_id" : 1,
+            "points"     : 10
         },
         {
-            "name"       : "",
-            "company_id" : ,
-            "points"     : 
+            "name"       : "cha",
+            "company_id" : 1,
+            "points"     : 6
         },
         {
-            "name"       : "",
-            "company_id" : ,
-            "points"     : 
+            "name"       : "hamburguer",
+            "company_id" : 2,
+            "points"     : 15
         },
         {
-            "name"       : "",
-            "company_id" : ,
-            "points"     : 
+            "name"       : "batata frita",
+            "company_id" : 2,
+            "points"     : 2
         }
     ],
 
     "Acquisitions": [
         {
-            "company_id" : ,
-            "user_id"    : ,
-            "product_id" : ,
-            "longitude"  : ,
-            "latitude"   : 
+            "company_id" : 1,
+            "user_id"    : 1,
+            "product_id" : 1,
+            "longitude"  : 50.01,
+            "latitude"   : 50.00
         },
         {
-            "company_id" : ,
-            "user_id"    : ,
-            "product_id" : ,
-            "longitude"  : ,
-            "latitude"   : 
+            "company_id" : 2,
+            "user_id"    : 1,
+            "product_id" : 4,
+            "longitude"  : -34.122,
+            "latitude"   : 122.92
         },
         {
-            "company_id" : ,
-            "user_id"    : ,
-            "product_id" : ,
-            "longitude"  : ,
-            "latitude"   : 
+            "company_id" : 1,
+            "user_id"    : 2,
+            "product_id" : 3,
+            "longitude"  : 10.0,
+            "latitude"   : -23.122
         },
         {
-            "company_id" : ,
-            "user_id"    : ,
-            "product_id" : ,
-            "longitude"  : ,
-            "latitude"   : 
+            "company_id" : 1,
+            "user_id"    : 3,
+            "product_id" : 2,
+            "longitude"  : 129.1,
+            "latitude"   : -12.0
         },
         {
-            "company_id" : ,
-            "user_id"    : ,
-            "product_id" : ,
-            "longitude"  : ,
-            "latitude"   : 
+            "company_id" : 2,
+            "user_id"    : 3,
+            "product_id" : 5,
+            "longitude"  : 1.0,
+            "latitude"   : 12.1
         }
     ]
 }
