@@ -12,6 +12,7 @@ conn = sqlite3.connect("svalbard.db")
 c = conn.cursor()
 
 for tablename in mock_data.keys():
+    c.execute("DELETE FROM " + tablename)
     for row in mock_data[tablename]:
         insert_query = "INSERT INTO " + tablename + " "
         fields = "("
