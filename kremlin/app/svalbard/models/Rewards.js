@@ -1,21 +1,21 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('RedeemedRewards', {
+	return sequelize.define('Rewards', {
 		id: {
 			type: DataTypes.INTEGER,
 			allowNull: true,
 			primaryKey: true
 		},
-		reward_id: {
+		company_id: {
 			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		user_id: {
-			type: DataTypes.INTEGER,
+		name: {
+			type: DataTypes.STRING(50),
 			allowNull: false
 		},
-		used: {
+		points: {
 			type: DataTypes.INTEGER,
 			allowNull: false
 		},
@@ -23,8 +23,13 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.STRING(10),
 			allowNull: false,
 			defaultValue: 'DATE(CURRENT_TIMESTAMP)'
+		},
+		updateAt: {
+			type: DataTypes.STRING(10),
+			allowNull: false,
+			defaultValue: 'DATE(CURRENT_TIMESTAMP)'
 		}
 	}, {
-		tableName: 'RedeemedRewards'
+		tableName: 'Rewards'
 	});
 };

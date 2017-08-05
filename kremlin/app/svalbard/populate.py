@@ -2,7 +2,7 @@ import sqlite3
 import pprint
 import json
 
-with open("mock_data.json") as data:
+with open("./setup/mock_data.json") as data:
     mock_data = json.load(data)
 
 printer = pprint.PrettyPrinter()
@@ -11,7 +11,7 @@ printer.pprint(mock_data)
 conn = sqlite3.connect("svalbard.db")
 c = conn.cursor()
 
-with open("genesis.sql") as genesis:
+with open("./setup/genesis.sql") as genesis:
     g = genesis.read().split(";")
     for statement in g:
         print(statement)
@@ -34,3 +34,7 @@ for tablename in mock_data.keys():
         print(insert_query)
         c.execute(insert_query)
 conn.commit()
+
+initSequelize = "sequelize-auto -h localhost -d svalbard.db -e sqlite -c setup/options.json"
+import os
+os.system(initSequelize)

@@ -4,7 +4,10 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize('svalbard', 'user', 'pass', {
   host: 'localhost',
   dialect: 'sqlite',
-  storage: 'svalbard.db'
+  storage: './app/svalbard/svalbard.db',
+  define: {
+    "createdAt": "created"
+  }
 });
 
 const db = {};
