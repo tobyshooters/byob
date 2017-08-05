@@ -11,6 +11,12 @@ printer.pprint(mock_data)
 conn = sqlite3.connect("svalbard.db")
 c = conn.cursor()
 
+with open("genesis.sql") as genesis:
+    g = genesis.read().split(";")
+    for statement in g:
+        print(statement)
+        c.execute(statement+";")
+
 for tablename in mock_data.keys():
     c.execute("DELETE FROM " + tablename)
     for row in mock_data[tablename]:
