@@ -35,6 +35,6 @@ for tablename in mock_data.keys():
         c.execute(insert_query)
 conn.commit()
 
-initSequelize = "sequelize-auto -h localhost -d svalbard.db -e sqlite -c setup/options.json"
 import os
-os.system(initSequelize)
+os.system("sequelize-auto -h localhost -d svalbard.db -e sqlite -c setup/options.json")
+os.system("mv models ../models")
