@@ -1,6 +1,13 @@
 const express    = require('express');
 const bodyParser = require('body-parser');
-const app        = express();
+const sqlite3    = require('sqlite3').verbose();
+
+let db = new sqlite3.Database('../svalbard/svalbard.db' (err) => {
+  if (err) console.error(err.message);
+  console.log('Connected to in memory SQlite database.');
+});
+
+const app = express();
 
 var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true}));
