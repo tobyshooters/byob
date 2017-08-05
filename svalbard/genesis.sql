@@ -6,7 +6,7 @@ CREATE TABLE Users(
     birthdate VARCHAR(10) NOT NULL,
     city VARCHAR(20) NOT NULL,
     country VARCHAR(20) NOT NULL,
-    created VARCHAR(10) NOT NULL
+    created VARCHAR(10) NOT NULL DEFAULT (DATE(CURRENT_TIMESTAMP))
     );
 
 DROP TABLE IF EXISTS Companies;
@@ -14,7 +14,7 @@ CREATE TABLE Companies(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(50) UNIQUE NOT NULL,
-    created VARCHAR(10) NOT NULL
+    created VARCHAR(10) NOT NULL DEFAULT (DATE(CURRENT_TIMESTAMP))
     );
 
 DROP TABLE IF EXISTS Products;
@@ -23,7 +23,7 @@ CREATE TABLE Products(
     name VARCHAR(50) UNIQUE NOT NULL,
     company_id INT NOT NULL,
     points INT NOT NULL,
-    created VARCHAR(10) NOT NULL
+    created VARCHAR(10) NOT NULL DEFAULT (DATE(CURRENT_TIMESTAMP))
     );
 
 DROP TABLE IF EXISTS Acquisitions;
@@ -32,7 +32,7 @@ CREATE TABLE Acquisitions(
     company_id INT NOT NULL,
     user_id INT NOT NULL,
     product_id INT NOT NULL,
-    created VARCHAR(10) NOT NULL,
     longitude REAL NOT NULL,
-    latitude REAL NOT NULL
+    latitude REAL NOT NULL,
+    created VARCHAR(10) NOT NULL DEFAULT (DATE(CURRENT_TIMESTAMP))
     );

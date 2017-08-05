@@ -1,0 +1,129 @@
+{
+
+    "Users": [
+        {
+            "username"  : "satojk",
+            "email"     : "lucasjks@gmail.com",
+            "birthdate" : "1998-02-04",
+            "city"      : "Sao Paulo",
+            "country"   : "Brazil"
+        },
+        {
+            "username"  : "csciutto",
+            "email"     : "cristobal.sciutto@gmail.com",
+            "birthdate" : "2017-07-04",
+            "city"      : "Sao Paulo",
+            "country"   : "Brazil"
+        },
+        {
+            "username"  : "jonathan",
+            "email"     : "jonathan@gmail.com",
+            "birthdate" : "2000-01-01",
+            "city"      : "Curitiba",
+            "country"   : "Brazil"
+        },
+        {
+            "username"  : "hafaela",
+            "email"     : "hahafa@hotmail.com",
+            "birthdate" : "2010-05-03",
+            "city"      : "",
+            "country"   : ""
+        },
+        {
+            "username"  : "",
+            "email"     : "",
+            "birthdate" : "",
+            "city"      : "",
+            "country"   : ""
+        }
+    ],
+
+    "Companies": [
+        {
+            "name"  : "",
+            "email" : ""
+        },
+        {
+            "name"  : "",
+            "email" : ""
+        },
+        {
+            "name"  : "",
+            "email" : ""
+        },
+        {
+            "name"  : "",
+            "email" : ""
+        },
+        {
+            "name"  : "",
+            "email" : ""
+        }
+    ],
+
+    "Products": [
+        {
+            "name"       : "",
+            "company_id" : ,
+            "points"     : 
+        },
+        {
+            "name"       : "",
+            "company_id" : ,
+            "points"     : 
+        },
+        {
+            "name"       : "",
+            "company_id" : ,
+            "points"     : 
+        },
+        {
+            "name"       : "",
+            "company_id" : ,
+            "points"     : 
+        },
+        {
+            "name"       : "",
+            "company_id" : ,
+            "points"     : 
+        }
+    ],
+
+    "Acquisitions": [
+        {
+            "company_id" : ,
+            "user_id"    : ,
+            "product_id" : ,
+            "longitude"  : ,
+            "latitude"   : 
+        },
+        {
+            "company_id" : ,
+            "user_id"    : ,
+            "product_id" : ,
+            "longitude"  : ,
+            "latitude"   : 
+        },
+        {
+            "company_id" : ,
+            "user_id"    : ,
+            "product_id" : ,
+            "longitude"  : ,
+            "latitude"   : 
+        },
+        {
+            "company_id" : ,
+            "user_id"    : ,
+            "product_id" : ,
+            "longitude"  : ,
+            "latitude"   : 
+        },
+        {
+            "company_id" : ,
+            "user_id"    : ,
+            "product_id" : ,
+            "longitude"  : ,
+            "latitude"   : 
+        }
+    ]
+}
