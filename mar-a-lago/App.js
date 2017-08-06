@@ -1,32 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
+import { List, ListItem } from 'react-native-elements';
 import { MapView } from 'expo';
-import { StackNavigator } from 'react-navigation';
-import { LoginButton, AccessToken } from 'react-native-fbsdk';
-
-var Login = React.createClass({
-  render: function() {
-    return (
-      <View>
-        <LoginButton
-          publishPermissions={["publish_actions"]}
-          onLoginFinished={
-            (error, result) => {
-              if (error) {
-                alert("login has error: " + result.error);
-              } else if (result.isCancelled) {
-                alert("login is cancelled.");
-              } else {
-                AccessToken.getCurrentAccessToken().then(
-                  (data) => { alert(data.accessToken.toString()) }
-                )
-              }
-            }
-          }/>
-      </View>
-    );
-  }
-});
+import { TabNavigator } from 'react-navigation';
+import { challenges, bars } from './data';
 
 export class HelloWorldScreen extends React.Component {
   constructor(props) {
@@ -39,14 +16,7 @@ export class HelloWorldScreen extends React.Component {
         latitudeDelta: 0.00922,
         longitudeDelta: 0.00421,
       },
-      markers: [
-        {
-          coord: {
-            latitude: -23.597732,
-            longitude: -46.682186
-          },
-        }
-      ],
+      markers: bars,
     };
   }
 
@@ -68,6 +38,22 @@ export class HelloWorldScreen extends React.Component {
   }
 }
 
+export class ChallengesScreen extends React.Component {
+  render() {
+    return (
+      <ScrollView>
+        <List>
+          {challenges.map((challenge) => (
+            <ListItem
+              title={challenge.name.first}
+            />
+          ))}
+        </List>
+      </ScrollView>
+    );
+  }
+}
+
 export class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
@@ -80,15 +66,15 @@ export class HomeScreen extends React.Component {
           }
         />
         <Text>Login to Facebook!</Text>
-        <Login />
       </View>
     );
   }
 }
 
-const App = StackNavigator({
+const App = TabNavigator({
   Home:       { screen: HomeScreen },
   HelloWorld: { screen: HelloWorldScreen },
+  Challenges: { screen: ChallengesScreen },
 });
 
 export default () => <App />;
