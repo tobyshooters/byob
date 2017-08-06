@@ -2,6 +2,31 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { MapView } from 'expo';
 import { StackNavigator } from 'react-navigation';
+import { LoginButton, AccessToken } from 'react-native-fbsdk';
+
+var Login = React.createClass({
+  render: function() {
+    return (
+      <View>
+        <LoginButton
+          publishPermissions={["publish_actions"]}
+          onLoginFinished={
+            (error, result) => {
+              if (error) {
+                alert("login has error: " + result.error);
+              } else if (result.isCancelled) {
+                alert("login is cancelled.");
+              } else {
+                AccessToken.getCurrentAccessToken().then(
+                  (data) => { alert(data.accessToken.toString()) }
+                )
+              }
+            }
+          }/>
+      </View>
+    );
+  }
+});
 
 export class HelloWorldScreen extends React.Component {
   constructor(props) {
@@ -20,7 +45,6 @@ export class HelloWorldScreen extends React.Component {
             latitude: -23.597732,
             longitude: -46.682186
           },
-          key: "test",
         }
       ],
     };
@@ -29,9 +53,8 @@ export class HelloWorldScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
       <MapView
-        style={{ flex: 1 }}
+        style={styles.container}
         region={this.state.region}
       >
         {this.state.markers.map(marker => (
@@ -41,7 +64,6 @@ export class HelloWorldScreen extends React.Component {
           />
         ))}
       </MapView>
-      </View>
     );
   }
 }
@@ -50,12 +72,16 @@ export class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <Button
-        title="Go to Hello World"
-        onPress={ () =>
-          navigate('HelloWorld')
-        }
-      />
+      <View style={styles.container}>
+        <Button
+          title="Go to Hello World"
+          onPress={ () =>
+             navigate('HelloWorld')
+          }
+        />
+        <Text>Login to Facebook!</Text>
+        <Login />
+      </View>
     );
   }
 }
