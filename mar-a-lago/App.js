@@ -1,12 +1,47 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import { MapView } from 'expo';
 import { StackNavigator } from 'react-navigation';
 
 export class HelloWorldScreen extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      region: {
+        latitude: -23.597732,
+        longitude: -46.682186,
+        latitudeDelta: 0.00922,
+        longitudeDelta: 0.00421,
+      },
+      markers: [
+        {
+          coord: {
+            latitude: -23.597732,
+            longitude: -46.682186
+          },
+          key: "test",
+        }
+      ],
+    };
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
-        <Text>Hello World</Text>
+      <View>
+      <MapView
+        style={{ flex: 1 }}
+        region={this.state.region}
+      >
+        {this.state.markers.map(marker => (
+          <MapView.Marker
+            coordinate={marker.coord}
+            title={marker.key}
+          />
+        ))}
+      </MapView>
+      </View>
     );
   }
 }
