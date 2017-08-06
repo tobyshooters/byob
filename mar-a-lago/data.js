@@ -78,7 +78,23 @@ export const bars = [
         {coords: {latitude: -23.5638792, longitude: -46.5943342}, title: "Templo Bar de Fé"}, 
         {coords: {latitude: -23.5619059, longitude: -46.6885798}, title: "The Black Crow Pub"}, 
         {coords: {latitude: -23.5685258, longitude: -46.5926198}, title: "Um Brinde ao Surf"}, 
-        {coords: {latitude: -23.574635, longitude: -46.656539}, title: "Violeta Bar"}
+        {coords: {latitude: -23.574635, longitude: -46.656539}, title: "Violeta Bar"},
+	{coords: {latitude: -23.6021858, longitude: -46.6832686}, title: "Bar do Celso SP"}, 
+	{coords: {latitude: -38.0247784, longitude: -57.54152559999999}, title: "Brooklin Coletivo"}, 
+	{coords: {latitude: -23.602748, longitude: -46.6937478}, title: "Bar Bom Rini"}, 
+	{coords: {latitude: -23.6083973, longitude: -46.6891262}, title: "Blend Bar"}, 
+	{coords: {latitude: -23.6027232, longitude: -46.69152589999999}, title: "Quintana Bar"}, 
+	{coords: {latitude: -23.6074792, longitude: -46.6922968}, title: "Kape Restaurante e Karaokê Bar"}, 
+	{coords: {latitude: -23.6002114, longitude: -46.6887339}, title: "Red Bar"}, 
+	{coords: {latitude: -23.6027864, longitude: -46.6918129}, title: "Tatu Bola Bar"}, 
+	{coords: {latitude: -23.6010943, longitude: -46.6892815}, title: "Refúgio Do Alemão"}, 
+	{coords: {latitude: -23.6038228, longitude: -46.6911777}, title: "Iguape Bar Restaurante e Lancheteria"}, 
+	{coords: {latitude: -23.6058648, longitude: -46.6917674}, title: "Estrelas de Minas"}, 
+	{coords: {latitude: -23.603475, longitude: -46.692723}, title: "Varandinha Restaurante e Bar"}, 
+	{coords: {latitude: -23.6018924, longitude: -46.68958929999999}, title: "Bar & Restaurante Sakae Sushi"}, 
+	{coords: {latitude: -23.6064965, longitude: -46.6927193}, title: "Ferrovia II"}, 
+	{coords: {latitude: -23.5983543, longitude: -46.6744614}, title: "Bar Zé Bonito"}, 
+	{coords: {latitude: -23.6036544, longitude: -46.6923964}, title: "Rangos bar & restaurante"}
 ]
 
 export const bars2 = [
