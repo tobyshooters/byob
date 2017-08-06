@@ -4,7 +4,7 @@ import { List, ListItem } from 'react-native-elements';
 import { MapView } from 'expo';
 import { TabNavigator } from 'react-navigation';
 import { challenges, bars } from './data';
-import beerToken from './assets/beer.png';
+import beerMedal from './assets/logo_menor.png';
 
 export class HelloWorldScreen extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ export class HelloWorldScreen extends React.Component {
           <MapView.Marker
             coordinate={marker.coords}
             title={marker.key}
-            image={beerToken}
+            image={beerMedal}
           />
         ))}
       </MapView>
@@ -48,6 +48,7 @@ export class ChallengesScreen extends React.Component {
           {challenges.map((challenge) => (
             <ListItem
               title={challenge.nome}
+              badge={{ value: challenge.valor, textStyle: { color: 'orange' }, containerStyle: { marginTop: 5} }}
             />
           ))}
         </List>
@@ -88,4 +89,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  badgeStyle: {
+  
+  }
 });
