@@ -1,7 +1,9 @@
 module.exports = function(app, db) {
   // Test
   app.get('/', (req, res) => {
-    console.log("nois!");
+    db.Users.findAll().then(users => {
+      res.json(users);
+    });
   });
 
   // Users

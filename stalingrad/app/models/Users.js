@@ -1,30 +1,30 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('Acquisitions', {
+	return sequelize.define('Users', {
 		id: {
 			type: DataTypes.INTEGER,
 			allowNull: true,
 			primaryKey: true
 		},
-		company_id: {
-			type: DataTypes.INTEGER,
+		username: {
+			type: DataTypes.STRING(20),
 			allowNull: false
 		},
-		user_id: {
-			type: DataTypes.INTEGER,
+		email: {
+			type: DataTypes.STRING(50),
 			allowNull: false
 		},
-		product_id: {
-			type: DataTypes.INTEGER,
+		birthdate: {
+			type: DataTypes.STRING(10),
 			allowNull: false
 		},
-		longitude: {
-			type: DataTypes.REAL,
+		city: {
+			type: DataTypes.STRING(20),
 			allowNull: false
 		},
-		latitude: {
-			type: DataTypes.REAL,
+		country: {
+			type: DataTypes.STRING(20),
 			allowNull: false
 		},
 		created: {
@@ -32,12 +32,12 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false,
 			defaultValue: 'DATE(CURRENT_TIMESTAMP)'
 		},
-		updateAt: {
+		updatedAt: {
 			type: DataTypes.STRING(10),
 			allowNull: false,
 			defaultValue: 'DATE(CURRENT_TIMESTAMP)'
 		}
 	}, {
-		tableName: 'Acquisitions'
+		tableName: 'Users'
 	});
 };

@@ -1,18 +1,26 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('Companies', {
+	return sequelize.define('PointOperations', {
 		id: {
 			type: DataTypes.INTEGER,
 			allowNull: true,
 			primaryKey: true
 		},
-		name: {
-			type: DataTypes.STRING(50),
+		user_id: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		email: {
-			type: DataTypes.STRING(50),
+		company_id: {
+			type: DataTypes.INTEGER,
+			allowNull: false
+		},
+		product_id: {
+			type: DataTypes.INTEGER,
+			allowNull: false
+		},
+		amount: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
 		created: {
@@ -20,12 +28,12 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false,
 			defaultValue: 'DATE(CURRENT_TIMESTAMP)'
 		},
-		updateAt: {
+		updatedAt: {
 			type: DataTypes.STRING(10),
 			allowNull: false,
 			defaultValue: 'DATE(CURRENT_TIMESTAMP)'
 		}
 	}, {
-		tableName: 'Companies'
+		tableName: 'PointOperations'
 	});
 };

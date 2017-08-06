@@ -1,30 +1,26 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('Users', {
+	return sequelize.define('RedeemedRewards', {
 		id: {
 			type: DataTypes.INTEGER,
 			allowNull: true,
 			primaryKey: true
 		},
-		username: {
-			type: DataTypes.STRING(20),
+		reward_id: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		email: {
-			type: DataTypes.STRING(50),
+		company_id: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		birthdate: {
-			type: DataTypes.STRING(10),
+		user_id: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		city: {
-			type: DataTypes.STRING(20),
-			allowNull: false
-		},
-		country: {
-			type: DataTypes.STRING(20),
+		used: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
 		created: {
@@ -32,12 +28,12 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false,
 			defaultValue: 'DATE(CURRENT_TIMESTAMP)'
 		},
-		updateAt: {
+		updatedAt: {
 			type: DataTypes.STRING(10),
 			allowNull: false,
 			defaultValue: 'DATE(CURRENT_TIMESTAMP)'
 		}
 	}, {
-		tableName: 'Users'
+		tableName: 'RedeemedRewards'
 	});
 };
