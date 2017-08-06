@@ -2,3 +2,8 @@
 {"id":1,"username":"satojk","_id":"QkMEYAsFLO4c6egY","createdAt":{"$$date":1501988273708},"updatedAt":{"$$date":1501988273708}}
 {"username":"csciutto","_id":"i5ZVuCkelFWK3bNf","createdAt":{"$$date":1501988022423},"updatedAt":{"$$date":1501988022423}}
 {"username":"csciutto","_id":"oaxqqVXynuq7scb3","createdAt":{"$$date":1501988065475},"updatedAt":{"$$date":1501988065475}}
+{"_id":1,"username":"joaoss","first_name":"Joao","last_name":"Silva","email":"joaosilva@gmail.com","challenges":[1,3,4],"friends":[2,3],"createdAt":{"$$date":1501992404639},"updatedAt":{"$$date":1501992404639}}
+{"_id":2,"username":"mariass","first_name":"Maria","last_name":"Silva","email":"mariasilva@gmail.com","challenges":[1,3],"friends":[1],"createdAt":{"$$date":1501992404645},"updatedAt":{"$$date":1501992404645}}
+{"_id":3,"username":"labsde","first_name":"Roberto","last_name":"Macedo","email":"robmac@hotmail.com","challenges":[1,2,3,4,5],"friends":[1,5],"createdAt":{"$$date":1501992404648},"updatedAt":{"$$date":1501992404648}}
+{"_id":4,"username":"danilson","first_name":"Danilo","last_name":"Alves","email":"dan96@gmail.com","challenges":[],"friends":[],"createdAt":{"$$date":1501992404649},"updatedAt":{"$$date":1501992404649}}
+{"_id":5,"username":"abmol","first_name":"Alana","last_name":"Lima","email":"alima@gmail.com","challenges":[1,2,3,4,5],"friends":[3],"createdAt":{"$$date":1501992404650},"updatedAt":{"$$date":1501992404650}}
