@@ -4,6 +4,7 @@ import { List, ListItem } from 'react-native-elements';
 import { MapView } from 'expo';
 import { TabNavigator } from 'react-navigation';
 import { challenges, bars } from './data';
+import beerToken from './assets/beer.png';
 
 export class HelloWorldScreen extends React.Component {
   constructor(props) {
@@ -29,8 +30,9 @@ export class HelloWorldScreen extends React.Component {
       >
         {this.state.markers.map(marker => (
           <MapView.Marker
-            coordinate={marker.coord}
+            coordinate={marker.coords}
             title={marker.key}
+            image={beerToken}
           />
         ))}
       </MapView>
@@ -45,7 +47,7 @@ export class ChallengesScreen extends React.Component {
         <List>
           {challenges.map((challenge) => (
             <ListItem
-              title={challenge.name.first}
+              title={challenge.nome}
             />
           ))}
         </List>
