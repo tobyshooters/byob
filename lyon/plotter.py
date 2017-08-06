@@ -2,7 +2,7 @@ import plotly
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-plotly.tools.set_credentials_file(username='satojk', api_key='nGrVGv2j7nWWcpCjLOMg')
+plotly.tools.set_credentials_file(username='INSERT PLOTLY USERNAME HERE', api_key='INSERT API KEY HERE')
 
 def movimentacoes():
     trace0 = Scatter(
